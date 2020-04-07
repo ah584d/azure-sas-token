@@ -1,0 +1,44 @@
+<form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="model.name" #name="ngModel"
+            [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }" required>
+        <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+            <p *ngIf="name.errors.required">Name is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+            [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid }" email required>
+        <div *ngIf="userForm.submitted && email.invalid" class="invalid-feedback">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">Must be a valid email address</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel"
+            [ngClass]="{ 'is-invalid': userForm.submitted && password.invalid }" minlength="8" required>
+        <div *ngIf="userForm.submitted && password.invalid" class="invalid-feedback">
+            <div *ngIf="password.errors.required">Password is required</div>
+            <div *ngIf="password.errors.minlength">Password should be at least 8 characters long</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Hobbies</label>
+        <select class="form-control" name="hobbies" [(ngModel)]="Hobbies">
+            <option value="">Select an option</option>
+            <option *ngFor="let hoby of Hobbies" [value]="hoby">
+                {{hoby}}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-danger btn-block">Submit</button>
+    </div>
+</form>

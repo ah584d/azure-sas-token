@@ -1,0 +1,8 @@
+html, body {
+    background: #f7f7f7 !important;
+}
+
+form {
+  max-width: 450px;
+  margin: 30px auto;
+}
