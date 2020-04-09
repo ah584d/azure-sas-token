@@ -32,7 +32,7 @@ export class AppComponent {
         '1 month'
     ];
 
-    onSubmit(form: FormGroup) {
+    onSubmit(form) {
 		console.log(form.value);
 		const formValues = form.value;
 		const sasToken = this.tokenGeneratorService.createSharedAccessToken(
