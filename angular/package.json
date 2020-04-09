@@ -1,6 +1,7 @@
 {
-  "name": "azure-sas-token",
-  "version": "0.0.0",
+  "name": "azure-sas-token-angular",
+  "version": "0.0.1",
+  "description": "angular application to generate azure sas token",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
@@ -48,5 +49,7 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "author": "Avraham Hamu",
+  "license": "ISC"
 }
