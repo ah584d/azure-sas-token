@@ -1,0 +1,43 @@
+<form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+  <div class="form-group">
+    <label>Resource URI</label>
+	<input type="text" class="form-control" name="resourceURIField" [(ngModel)]="model.resourceURI" #resourceURIField="ngModel"
+      [ngClass]="{ 'is-invalid': userForm.submitted && resourceURIField.invalid }" required>
+    <div class="invalid-feedback" *ngIf="userForm.submitted && resourceURIField.invalid">
+      <p *ngIf="resourceURIField.errors.required">Resource URI is required</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Shared Access Policy Name</label>
+    <input type="text" class="form-control" name="saNameField" [(ngModel)]="model.saName" #saNameField="ngModel"
+      [ngClass]="{ 'is-invalid': userForm.submitted && saNameField.invalid }" required>
+    <div *ngIf="userForm.submitted && saNameField.invalid" class="invalid-feedback">
+      <div *ngIf="saNameField.errors.required">Policy Name is required</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Shared Access Key</label>
+    <input type="text" class="form-control" name="saKeyField" [(ngModel)]="model.saKey" #saKeyField="ngModel"
+      [ngClass]="{ 'is-invalid': userForm.submitted && saKeyField.invalid }" minlength="44" required>
+    <div *ngIf="userForm.submitted && saKeyField.invalid" class="invalid-feedback">
+      <div *ngIf="saKeyField.errors.required">Key is required</div>
+      <div *ngIf="saKeyField.errors.minlength">Key should be 44 characters long</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Expire time</label>
+    <select class="form-control" name="timeRanges" [(ngModel)]="timeRanges">
+      <option value="">Select an option</option>
+      <option *ngFor="let time of timeRanges" [value]="time">
+        {{time}}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-danger btn-block">Geneate SAS token</button>
+  </div>
+</form>

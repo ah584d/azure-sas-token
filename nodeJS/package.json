@@ -1,0 +1,16 @@
+{
+  "name": "azure-sas-token-node",
+  "version": "1.0.0",
+  "description": "simple node application to generate azure sas token",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "azure",
+    "sas",
+    "token"
+  ],
+  "author": "Avraham Hamu",
+  "license": "ISC"
+}
