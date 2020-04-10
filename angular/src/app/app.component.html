@@ -1,3 +1,5 @@
+Azure SAS toekn generator
+
 <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
   <div class="form-group">
     <label>Resource URI</label>
@@ -37,6 +39,9 @@
     </select>
   </div>
 
+  <div>
+		<textarea class="form-control" readonly rows="3">{{sasToken}}</textarea>  
+  </div>
   <div class="form-group">
     <button class="btn btn-danger btn-block">Geneate SAS token</button>
   </div>

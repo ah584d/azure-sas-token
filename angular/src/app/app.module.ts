@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-//import * as utf8 from 'utf8';
+import { TokenGeneratorService } from './services';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TokenGeneratorService],
   bootstrap: [AppComponent]
 })
 
