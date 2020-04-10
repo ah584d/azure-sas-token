@@ -91,6 +91,8 @@ The only related topic that I founded on Microsoft Azure help
 
 https://docs.microsoft.com/en-us/rest/api/eventhub/generate-sas-token
 
+Icon from: http://www.kameleon.pics
+
 ## License
 A short snippet describing the license (MIT, Apache etc)
 
