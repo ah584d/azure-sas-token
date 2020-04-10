@@ -9,14 +9,14 @@ export class TokenGeneratorService {
 
 	constructor() { }
 
-	createSharedAccessToken(resourceUri: string, saPolicyName: string, saKey:string, expireTime: number) { 
+	createSharedAccessToken(resourceUri: string, saPolicyName: string, saKey:string, expireTimeInHours: number) { 
 		if (!resourceUri || !saPolicyName || !saKey) { 
 			throw 'Missing required parameter'; 
 		} 
 		const urlEncoded = encodeURIComponent(resourceUri);
 
 		// Set expiration in seconds
-		const ttl = this.getExpirationTime(expireTime);
+		const ttl = this.getExpirationTime(expireTimeInHours);
 
 		const signature = urlEncoded + '\n' + ttl;
 
@@ -28,11 +28,11 @@ export class TokenGeneratorService {
 		return `SharedAccessSignature sr=${urlEncoded}&sig=${encodeURIComponent(hashInBase64)}&se=${ttl}&skn=${saPolicyName}`; 
 	}
 
-	private getExpirationTime(expireTime?: number): number {
-		expireTime = expireTime || 24 *7;
+	private getExpirationTime(expireTimeInHours?: number): number {
+		expireTimeInHours = expireTimeInHours || 24 *7;
 		const now = new Date(); 
-		const week = 60 * 60 * expireTime;
-		const ttl = Math.round(now.getTime() / 1000) + week;
+		const expirationDelay = 60 * 60 * expireTimeInHours;
+		const ttl = Math.round(now.getTime() / 1000) + expirationDelay;
 		return ttl;
 	}
 }

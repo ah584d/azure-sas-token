@@ -17,12 +17,12 @@ export class AppComponent {
 			'<signature key name>', 
 			'primary key or secondary key');
 
-    timeRanges: string[] = [
-        '1 hour',
-        '2 hours',
-        '1 day',
-        '1 week',
-        '1 month'
+    timeRanges: any[] = [
+		{ key : '1 hour', value : 1 },
+		{ key : '2 hours', value : 2 },
+		{ key : '1 day', value : 24 },
+		{ key : '1 week', value : 168 },
+		{ key : '1 month', value : 720 }
     ];
 
     onSubmit(form) {
@@ -33,7 +33,7 @@ export class AppComponent {
 			formValues.resourceURIField,
 			formValues.saNameField,
 			formValues.saKeyField,
-			/*+formValues.timeRanges*/ 60);
+			+formValues.timeRangesField.value);
 		console.log(`sas token: ${sasToken}`);
 		if(sasToken) {
 			this.sasToken = sasToken;

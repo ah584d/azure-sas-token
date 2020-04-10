@@ -31,10 +31,10 @@
 
   <div class="form-group">
     <label>Expire time</label>
-    <select class="form-control" name="timeRanges" [(ngModel)]="timeRanges">
+    <select class="form-control" name="timeRangesField" [(ngModel)]="selectedValue">
       <option value="">Select an option</option>
-      <option *ngFor="let time of timeRanges" [value]="time">
-        {{time}}
+      <option *ngFor="let time of timeRanges" [ngValue]="time">
+        {{time.key}}
       </option>
     </select>
   </div>
