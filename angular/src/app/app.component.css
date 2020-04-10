@@ -9,7 +9,39 @@ html, body {
 	border-radius: 5px;
     border: 1px solid lightseagreen;
 }
+
+.main-form-wrapper {
+	background: #f4f7f8;
+	border: 1px solid purple;
+	border-radius: 3%;
+	min-width: 500px;
+}
+
+.main-field-set{
+	padding: 26px;
+}
+.number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
 form {
   max-width: 450px;
   margin: 30px auto;
+}
+
+span {
+	text-align: center;
+	color: #C0C0C0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
 }

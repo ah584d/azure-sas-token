@@ -13,9 +13,10 @@ export class AppComponent {
 	sasToken: string;
 
 	model = new SASToken(
-			'https://<service namespace>.servicebus.windows.net/<topic name or queue>',
-			'<signature key name>', 
-			'primary key or secondary key');
+			// 'https://<service namespace>.servicebus.windows.net/<topic name or queue>',
+			// '<signature key name>', 
+			// 'primary key or secondary key'
+			);
 
     timeRanges: any[] = [
 		{ key : '1 hour', value : 1 },
