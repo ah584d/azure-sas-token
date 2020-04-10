@@ -46,9 +46,9 @@
     <div class="form-group">
       <fieldset>
         <legend><span class="number">4</span>Expire time</legend>
-        <select class="form-control" name="timeRangesField" [(ngModel)]="timeRanges">
+        <select class="form-control" name="timeRangesField" [(ngModel)]="model.expireTime">
           <option value="" selected>Select an option</option>
-          <option *ngFor="let time of timeRanges" [ngValue]="time">
+          <option *ngFor="let time of timeRanges" [ngValue]="time.value">
             {{time.key}}
           </option>
         </select>

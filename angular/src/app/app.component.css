@@ -6,14 +6,16 @@ html, body {
 	color: darkslateblue;
     text-align: center;
 	font-size: x-large;
-	border-radius: 5px;
-    border: 1px solid lightseagreen;
+	border-radius: 15px;
+	border: 1px solid #1abc9c;
+	width: 500px;
+    margin: 0px auto 0px auto;
 }
 
 .main-form-wrapper {
 	background: #f4f7f8;
 	border: 1px solid purple;
-	border-radius: 3%;
+	border-radius: 15px;
 	min-width: 500px;
 }
 

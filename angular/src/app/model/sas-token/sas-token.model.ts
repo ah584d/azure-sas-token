@@ -3,5 +3,5 @@ export class SASToken {
 		public resourceURI?: string,
 		public saName?: string,
 		public saKey?: string,
-		public expireTime?: string){}
+		public expireTime?: number){}
 }

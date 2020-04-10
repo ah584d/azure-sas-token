@@ -10,11 +10,11 @@ import { SASToken } from './model';
 export class AppComponent {
 	constructor(private tokenGeneratorService: TokenGeneratorService) {}
 
-	sasToken: string;
-
+	sasToken: string = undefined;
+	selectedTime: number = undefined;
 	model = new SASToken();
 
-    timeRanges: any[] = [
+    timeRanges: { key:string, value: number }[] = [
 		{ key : '1 hour', value : 1 },
 		{ key : '2 hours', value : 2 },
 		{ key : '1 day', value : 24 },
