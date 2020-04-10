@@ -2,6 +2,13 @@ html, body {
     background: #f7f7f7cb !important;
 }
 
+.main-layout-title {
+	color: darkslateblue;
+    text-align: center;
+	font-size: x-large;
+	border-radius: 5px;
+    border: 1px solid lightseagreen;
+}
 form {
   max-width: 450px;
   margin: 30px auto;

@@ -8,7 +8,8 @@
     "build": "ng build --prod --baseHref='https://ah584d.github.io/azure-sas-token/'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "node ./scripts/fixBugCryptoJsInAngular8.js"
   },
   "private": true,
   "dependencies": {
