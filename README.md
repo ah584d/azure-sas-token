@@ -10,9 +10,6 @@ I'm proud to offer you a simple JS way to generate Azure SAS token - using node 
 ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. - 
 
-[![Build Status](https://travis-ci.org/akashnimare/foco.svg?branch=master)](https://travis-ci.org/akashnimare/foco)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
-
 ## Code style
 If you're using any code style like xo, standard etc. That will help others while contributing to your project. Ex. -
 
@@ -45,6 +42,16 @@ Show what the library does as concisely as possible, developers should be able t
 ## Installation
 Provide step by step series of examples and explanations about how to get a development env running.
 
+For node
+```sh
+npm install utf8
+```
+
+For angular
+```sh
+cd azure-sas-toekn/angular
+npm install d
+```
 ## Example (Optional)
 
 ```javascript
@@ -70,12 +77,10 @@ If people like your project they’ll want to learn how they can use it. To do s
 
 ## Contribute
 
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
+Feel free to open PR.
 
 ## Credits
 Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
-
-#### Anything else that seems useful
 
 ## License
 A short snippet describing the license (MIT, Apache etc)
