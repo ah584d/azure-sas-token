@@ -1,4 +1,4 @@
-<img src="icon.svg" align="right" />
+<img src="pictures/icon.svg" align="right" />
 
 ## Azure SAS token generator [ UNDER CONSTRUCTION ] 
 > A simple Azure SAS token generator
