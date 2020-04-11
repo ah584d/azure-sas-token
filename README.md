@@ -1,6 +1,8 @@
-![Azure SAS token generator](https://github.com/ah584d/azure-sas-token/blob/master/pictures/logo.svg)
+<img src="icon.svg" align="right" />
 
-## Azure SAS token generator [ UNDER CONSTRUCTION ]
+## Azure SAS token generator [ UNDER CONSTRUCTION ] 
+> A simple Azure SAS token generator
+
 The current project is about how to programmatically generate a Shared Access Signature (SAS) token to use with Postman in order to post messages to Azure Service Bus Topic/Queue.
 
 ## Motivation
