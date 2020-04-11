@@ -8,8 +8,8 @@ After googling for a while in order to generate the necessary token, to post mes
 I'm proud to offer you a simple JS way to generate Azure SAS token - using node - or angular.
 
 ## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
-
+[angular version]: you can use the online version, or to checkout the repository and run it locally on your computer
+[node version]: only by adding the dependency to your code, see example section
 
 ## Screenshots
 The application is totally safe, nothing is saved on third party, no request is sent outside, everything is handled in JS browser side
