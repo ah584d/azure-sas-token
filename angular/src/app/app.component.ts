@@ -24,13 +24,12 @@ export class AppComponent {
 
     onSubmit(form) {
 		console.log(form.value);
-		this.sasToken='';
 		const formValues = form.value;
 		const sasToken = this.tokenGeneratorService.createSharedAccessToken(
 			formValues.resourceURIField,
 			formValues.saNameField,
 			formValues.saKeyField,
-			+formValues.timeRangesField.value);
+			formValues.timeRangesField ? +formValues.timeRangesField.value : undefined);
 		console.log(`sas token: ${sasToken}`);
 		if(sasToken) {
 			this.sasToken = sasToken;
