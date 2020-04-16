@@ -12,5 +12,8 @@
     "token"
   ],
   "author": "Avraham Hamu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "utf8": "^3.0.0"
+  }
 }

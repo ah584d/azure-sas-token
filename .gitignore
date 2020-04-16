@@ -9,6 +9,7 @@
 
 # dependencies
 /angular/node_modules
+/nodeJS/node_modules
 
 # profiling files
 chrome-profiler-events*.json
