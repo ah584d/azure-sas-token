@@ -70,6 +70,11 @@ const sasToken = createSharedAccessToken('https://<service namespace>.servicebus
 console.log(`sasToken: ${sasToken}`);
 ```
 
+## Posting messages in Azure service-bus queue - tutorial
+
+https://github.com/ah584d/azure-sas-token/wiki/azure-service-bus-queue-tutorial
+
+Shared Access Signature
 ## Tests
 On going...
 
