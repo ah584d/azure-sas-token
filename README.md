@@ -4,7 +4,7 @@
 > A simple JavaScript Azure SAS token generator
 
 
-The current project is about how to programmatically generate a Shared Access Signature (SAS) token to use with Postman in order to post messages to Azure Service Bus Topic/Queue.
+The current project is about how to programmatically generate a Shared Access Signature (SAS) token to use with <a href="https://github.com/ah584d/azure-sas-token/wiki/azure-service-bus-queue-tutorial">Postman in order to post messages to Azure Service Bus Topic/Queue.</a>
 
 ## Motivation
 After googling for a while in order to generate the necessary token, to post messages to Azure service bus, i noticed that there is no clear explanations, how to ahieve it in JavaScript!!
@@ -71,10 +71,8 @@ console.log(`sasToken: ${sasToken}`);
 ```
 
 ## Posting messages in Azure service-bus queue - tutorial
-
 https://github.com/ah584d/azure-sas-token/wiki/azure-service-bus-queue-tutorial
 
-Shared Access Signature
 ## Tests
 On going...
 
