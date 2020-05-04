@@ -42,7 +42,7 @@ Provide step by step series of examples and explanations about how to get a deve
 
 For node
 ```sh
-npm install utf8
+npm install azure-sas-token -d
 ```
 
 For angular
@@ -59,8 +59,15 @@ Authorization: SharedAccessSignature sr=https%3A%2F%2F<yournamespace>.servicebus
 ## Code Example
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 ```javascript
-// code away!
+For node:
 
+const createSharedAccessToken = require('azure-sas-token').default;
+
+const sasToken = createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
+								'<signature key name>',
+								'<signature hash>');
+
+console.log(`sasToken: ${sasToken}`);
 ```
 
 ## Tests

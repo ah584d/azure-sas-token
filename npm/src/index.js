@@ -1,9 +1,9 @@
-const crypto = require('crypto');
-const utf8 = require('utf8');
+import { createHmac } from 'crypto';
+import { encode } from 'utf8';
 
 function createSharedAccessToken(resourceUri, saPolicyName, saKey) { 
 	if (!resourceUri || !saPolicyName || !saKey) { 
-			throw 'Missing required parameter'; 
+		throw 'Missing required parameter'; 
 	}
 
 	const urlEncoded = encodeURIComponent(resourceUri);
@@ -15,23 +15,17 @@ function createSharedAccessToken(resourceUri, saPolicyName, saKey) {
 
 	const signature = urlEncoded + '\n' + ttl;
 
-	const signatureUTF8 = utf8.encode(signature); 
+	const signatureUTF8 = encode(signature); 
 
 	// Use crypto
 	// 1. Creates an Hmac object that uses the given sha256 algorithm and key provided
 	// 2. binds data
 	// 3. encode in base64
-	const hash = crypto.createHmac('sha256', saKey)
+	const hash = createHmac('sha256', saKey)
 					.update(signatureUTF8)
 					.digest('base64'); 
 
 	return `SharedAccessSignature sr=${urlEncoded}&sig=${encodeURIComponent(hash)}&se=${ttl}&skn=${saPolicyName}`; 
 }
 
-
-
-const sasToken = createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
-								'<signature key name>',
-								'<signature hash>');
-
-console.log(`sasToken: ${sasToken}`);
+export default {createSharedAccessToken}; 
