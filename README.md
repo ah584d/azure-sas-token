@@ -1,6 +1,6 @@
 <img src="pictures/icon.svg" align="right" />
 
-## Azure SAS token generator [ UNDER CONSTRUCTION ] 
+## Azure SAS token generator
 > A simple JavaScript Azure SAS token generator
 
 
