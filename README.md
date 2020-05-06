@@ -69,7 +69,7 @@ console.log(`sasToken: ${sasToken}`);
 ```
 
 ## Posting messages in Azure service-bus queue - tutorial
-https://github.com/ah584d/azure-sas-token/wiki/azure-service-bus-queue-tutorial
+https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
 
 ## Tests
 On going...
