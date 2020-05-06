@@ -20,7 +20,7 @@ https://ah584d.github.io/azure-sas-token/
 
 This is the same application of the 'angular' folder.
 
-Don't forget to let me a Start :-)
+Don't forget to let me a Star &#11088; :-)
  
 ## How to use?
 [angular version]: you can use the online version, or to checkout the repository and run it locally on your computer
