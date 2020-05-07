@@ -7,7 +7,7 @@
 The current project is about how to programmatically generate a Shared Access Signature (SAS) token to use with <a href="https://github.com/ah584d/azure-send-message-to-service-bus-with-postman">Postman in order to post messages to Azure Service Bus Topic/Queue.</a>
 
 ## Motivation
-After googling for a while in order to generate the necessary token, to post messages to Azure service bus, i noticed that there is no clear explanations, how to ahieve it in JavaScript!!
+After googling for a while in order to generate the necessary token, to post messages to Azure service bus, i noticed that there is no clear explanations, how to achieve it in JavaScript!!
 I'm proud to offer you a simple JS way to generate Azure SAS token - using node - or angular.
 
 ## Features
