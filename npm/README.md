@@ -25,12 +25,19 @@ npm install azure-sas-token
 ## Code Example
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 ```javascript
-const createSharedAccessToken = require('azure-sas-token').default;
+const azureSasToken = require('azure-sas-token');
 
-const sasToken = createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
+// default token validity is 7 days
+let sasToken = azureSasToken.createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
 								'<signature key name>',
 								'<signature hash>');
+console.log(`sasToken: ${sasToken}`);
 
+// Specify your own validity in secs, two hours in this example
+sasToken = azureSasToken.createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
+								'<signature key name>',
+								'<signature hash>', 
+								60 * 60 * 2);
 console.log(`sasToken: ${sasToken}`);
 ```
 

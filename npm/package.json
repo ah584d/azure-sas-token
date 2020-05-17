@@ -1,6 +1,6 @@
 {
   "name": "azure-sas-token",
-  "version": "0.0.36",
+  "version": "0.0.39",
   "description": "simple node lib to generate azure sas token",
   "main": "lib/index.js",
   "scripts": {

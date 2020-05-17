@@ -1,7 +1,7 @@
 import { createHmac } from 'crypto';
 import { encode } from 'utf8';
 
-function createSharedAccessToken(resourceUri, saPolicyName, saKey) { 
+export function createSharedAccessToken(resourceUri, saPolicyName, saKey, saValidity=60*60*24*7) { 
 	if (!resourceUri || !saPolicyName || !saKey) { 
 		throw 'Missing required parameter'; 
 	}
@@ -9,9 +9,8 @@ function createSharedAccessToken(resourceUri, saPolicyName, saKey) {
 	const urlEncoded = encodeURIComponent(resourceUri);
 
 	// Set expiration in seconds
-	const now = new Date(); 
-	const week = 60*60*24*7;
-	const ttl = Math.round(now.getTime() / 1000) + week;
+	const now = new Date();
+	const ttl = Math.round(now.getTime() / 1000) + saValidity;
 
 	const signature = urlEncoded + '\n' + ttl;
 
@@ -28,4 +27,4 @@ function createSharedAccessToken(resourceUri, saPolicyName, saKey) {
 	return `SharedAccessSignature sr=${urlEncoded}&sig=${encodeURIComponent(hash)}&se=${ttl}&skn=${saPolicyName}`; 
 }
 
-export default {createSharedAccessToken}; 
+//export {createSharedAccessToken}; 
