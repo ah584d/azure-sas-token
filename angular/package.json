@@ -50,6 +50,13 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   },
+  "keywords": [
+    "azure",
+    "sas",
+	"token",
+	"shared access signature",
+	"cloud"
+  ],
   "author": "Avraham Hamu",
   "license": "ISC"
 }

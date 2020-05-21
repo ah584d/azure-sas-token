@@ -10,6 +10,16 @@
 			"name": "Debug Program",
 			"cwd": "${workspaceFolder}",
 			"program": "${workspaceFolder}/nodeJS/myAppExample.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}/npm",
+            "name": "Jest Current File",
+            "program": "${workspaceRoot}/npm/node_modules/.bin/jest",
+            "args": ["${relativeFile}"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
 		}
 	]
 }

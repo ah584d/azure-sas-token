@@ -45,7 +45,7 @@ console.log(`sasToken: ${sasToken}`);
 https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
 
 ## Tests
-On going...
+100% coverage
 
 ## Build status [under construction]
 
