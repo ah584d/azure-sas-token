@@ -9,7 +9,7 @@ The current project is about how to programmatically generate a Shared Access Si
 ![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/min/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token)
 
 ## Motivation
-After googling for a while in order to generate the necessary token, to post messages to Azure service bus, i noticed that there is no clear explanations, how to achieve it in JavaScript!!
+After googling for a while in order to generate the necessary token, to post messages to Azure service bus, I noticed that there is no clear explanations, how to achieve it in JavaScript!!
 I'm proud to offer you a simple JS way to generate Azure SAS token - using node - or angular.
 
 Don't forget to let me a Star &#11088; :-)
@@ -46,8 +46,6 @@ https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
 
 ## Tests
 100% coverage
-
-## Build status [under construction]
 
 ## Contribute
 Feel free to open PR.
