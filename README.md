@@ -6,7 +6,7 @@
 
 The current project is about how to programmatically generate a Shared Access Signature (SAS) token to use with <a href="https://github.com/ah584d/azure-send-message-to-service-bus-with-postman">Postman in order to post messages to Azure Service Bus Topic/Queue.</a>
 
-![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/min/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token)
+![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/min/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 ## Motivation
 After googling for a while in order to generate the necessary token, to post messages to Azure service bus, i noticed that there is no clear explanations, how to achieve it in JavaScript!!
 I'm proud to offer you a simple JS way to generate Azure SAS token - using node - or angular.
@@ -75,7 +75,8 @@ https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
 ## Tests
 On going...
 
-## Build status [under construction]
+## Build status
+![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
 ## Contribute
 Feel free to open PR.
