@@ -53,9 +53,9 @@
   "keywords": [
     "azure",
     "sas",
-	"token",
-	"shared access signature",
-	"cloud"
+    "token",
+    "shared access signature",
+    "cloud"
   ],
   "author": "Avraham Hamu",
   "license": "ISC"
