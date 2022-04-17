@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "importHelpers": false,
+    "inlineSourceMap": true,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "types": [ "node", "jest" ]
+  },
+  "include": ["src", "**/*.test.ts"],
+  "exclude": ["node_modules"]
+}

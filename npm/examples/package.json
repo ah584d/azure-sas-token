@@ -1,0 +1,13 @@
+{
+  "description": "example how to use azure-sas-token",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "tsc -p . --pretty"
+  },
+  "dependencies": {
+    "azure-sas-token": "file:../azure-sas-token-0.0.43.tgz"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}

@@ -1,13 +1,42 @@
 {
   "name": "azure-sas-token",
   "version": "0.0.43",
+  "author": "Avraham Hamu",
   "description": "simple node lib to generate azure sas token",
+  "license": "ISC",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
+    "build": "del-cli lib && npm run compile && npm run lint && del-cli lib/*.tsbuildinfo",
+    "compile": "tsc -p . --pretty",
+    "compile:dev": "npm run compile -- -w",
+    "lint": "eslint --ext .js,.ts .",
     "prepublish": "npm test && babel src --out-dir lib",
-	"test": "jest",
-	"patch": "npm version patch",
-	"publish": "npm publish"
+    "patch": "npm version patch",
+    "publish": "npm publish",
+    "test": "jest"
+  },
+  "dependencies": {
+    "utf8": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.24",
+    "@types/utf8": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
   },
   "babel": {
     "presets": [
@@ -21,17 +50,6 @@
     "shared access signature",
     "cloud"
   ],
-  "author": "Avraham Hamu",
-  "license": "ISC",
-  "dependencies": {
-    "utf8": "^3.0.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "jest": "^26.0.1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ah584d/azure-sas-token.git"

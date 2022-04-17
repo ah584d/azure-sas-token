@@ -9,7 +9,7 @@
 
 # dependencies
 /angular/node_modules
-/nodeJS/node_modules
+/npm/examples/node_modules
 /npm/node_modules
 /npm/lib
 

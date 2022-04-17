@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "commonjs",
+      "declaration": true,
+      "removeComments": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "outDir": "./lib",
+      "baseUrl": "./src",
+      "strict": true,
+      "typeRoots": [
+        "types"
+      ],
+      "types": [ "node" ],
+      "incremental": false,
+      "allowJs": true,
+      "skipLibCheck": true,
+      "noEmit": false,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src", "tests"],
+    "exclude": ["node_modules", "tests"]
+  }
