@@ -1,4 +1,4 @@
-<img src="pictures/icon.svg" align="right" />
+<img src="assets/icon.svg" align="right" />
 
 ## Azure SAS token generator
 > A simple JavaScript Azure SAS token generator
@@ -30,7 +30,7 @@ Don't forget to let me a Star &#11088; :-)
 
 ## Screenshots
 The application is totally safe, nothing is saved on third party, no request is sent outside, everything is handled in JS browser side
-![Azure SAS token generator](https://github.com/ah584d/azure-sas-token/blob/master/pictures/sas.jpg)
+![Azure SAS token generator](https://github.com/ah584d/azure-sas-token/blob/master/assets/sas.jpg)
 
 For those who still hesitate, you can checkout the code and run it locally on your computer
 
