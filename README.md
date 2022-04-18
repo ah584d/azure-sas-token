@@ -80,14 +80,12 @@ console.log(`sasToken: ${sasToken}`);
 https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
 
 ## Tests
-On going...
+Done!
 
 ## Build status
 ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
-## Contribute
-Feel free to open PR.
-
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ah584d/azure-sas-token/issues)
 ## Credits
 The only related topic that I founded on Microsoft Azure help
 
