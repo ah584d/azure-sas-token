@@ -9,7 +9,9 @@
 			"request": "launch",
 			"name": "Debug Program",
 			"cwd": "${workspaceFolder}",
-			"program": "${workspaceFolder}/nodeJS/myAppExample.js"
+			"program": "${workspaceFolder}/examples/ts/myAppExample.ts",
+			"preLaunchTask": "compileExample",
+			"outFiles": ["${workspaceFolder}/examples/ts/dist/*.js"]
 		},
 		{
 			"type": "node",

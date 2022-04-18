@@ -1,6 +1,5 @@
 {
   "description": "example how to use azure-sas-token",
-  "main": "lib/index.js",
   "scripts": {
     "compile": "tsc -p . --pretty"
   },
