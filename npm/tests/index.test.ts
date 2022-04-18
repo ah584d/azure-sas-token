@@ -1,3 +1,4 @@
+// import '@types/jest';
 import { createSharedAccessToken } from '../src/index';
 
 describe('Azure Sas Token', () => {
@@ -8,19 +9,19 @@ describe('Azure Sas Token', () => {
 
   test(`on missing param 'resourceUri' should throws an exception`, () => {
     expect(() => {
-      createSharedAccessToken(undefined, MOCK_VALID_PARAM_2, MOCK_VALID_PARAM_3);
+      createSharedAccessToken(undefined as any as string, MOCK_VALID_PARAM_2, MOCK_VALID_PARAM_3);
     }).toThrowError('Missing required parameter');
   });
 
   test(`on missing param 'saPolicyName' should throws an exception`, () => {
     expect(() => {
-      createSharedAccessToken(MOCK_VALID_PARAM_1, undefined, MOCK_VALID_PARAM_3);
+      createSharedAccessToken(MOCK_VALID_PARAM_1, undefined as any as string, MOCK_VALID_PARAM_3);
     }).toThrowError('Missing required parameter');
   });
 
   test(`on missing param 'saKey' should throws an exception`, () => {
     expect(() => {
-      createSharedAccessToken(MOCK_VALID_PARAM_1, MOCK_VALID_PARAM_2, undefined);
+      createSharedAccessToken(MOCK_VALID_PARAM_1, MOCK_VALID_PARAM_2, undefined as any as string);
     }).toThrowError('Missing required parameter');
   });
 

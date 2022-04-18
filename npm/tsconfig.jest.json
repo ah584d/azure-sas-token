@@ -5,8 +5,8 @@
     "inlineSourceMap": true,
     "noEmitOnError": true,
     "sourceMap": true,
-    "types": [ "node", "jest" ]
+    "types": [ "@types/jest", "node" ]
   },
-  "include": ["src", "**/*.test.ts"],
+  "include": ["tests"],
   "exclude": ["node_modules"]
 }
