@@ -9,7 +9,8 @@
 
 # dependencies
 /angular/node_modules
-/nodeJS/node_modules
+/npm/examples/**/node_modules
+/npm/examples/**/dist
 /npm/node_modules
 /npm/lib
 
@@ -52,3 +53,5 @@ Thumbs.db
 /npm/coverage
 /angular/coverage
 
+/.vscode/settings.json
+/npm/examples/ts/package-lock.json
