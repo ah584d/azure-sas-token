@@ -1,6 +1,6 @@
 {
   "description": "example how to use azure-sas-token",
   "dependencies": {
-    "azure-sas-token": "^0.0.43"
+    "azure-sas-token": "^0.0.45"
   }
 }
