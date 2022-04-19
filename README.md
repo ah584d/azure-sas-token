@@ -13,30 +13,8 @@ I'm proud to offer you a simple JS way to generate Azure SAS token - using node 
 
 ## Features
 It contains two folders:
- - nodeJS: a simple node application to generate a token using your IDE
+ - npm: a simple npm package to use in your node application
  - angular: an angular form allowing to generate a token based on the parameters filled in.
-
-If you prefer a simplier way to get fastly a token, you could use my angular application azure-sas-token from here:
-https://ah584d.github.io/azure-sas-token/
-
-This is the same application of the 'angular' folder.
-
-Don't forget to let me a Star &#11088; :-)
- 
-## How to use?
-[angular version]: you can use the online version, or to checkout the repository and run it locally on your computer
-
-[node version]: only by adding the dependency to your code, see example section
-
-## Screenshots
-The application is totally safe, nothing is saved on third party, no request is sent outside, everything is handled in JS browser side
-![Azure SAS token generator](https://github.com/ah584d/azure-sas-token/blob/master/assets/sas.jpg)
-
-For those who still hesitate, you can checkout the code and run it locally on your computer
-
-```sh
-npm run start
-```
 
 ## Installation
 
@@ -75,6 +53,30 @@ sasToken = createSharedAccessToken('https://<service namespace>.servicebus.windo
 								60 * 60 * 2);
 console.log(`sasToken: ${sasToken}`);
 ```
+
+If you prefer a simplier way to get fastly a token, you could use my angular application azure-sas-token from here:
+https://ah584d.github.io/azure-sas-token/
+
+This is the same application of the 'angular' folder.
+
+Don't forget to let me a Star &#11088; :-)
+ 
+## How to use?
+[angular version]: you can use the online version, or to checkout the repository and run it locally on your computer
+
+[node version]: only by adding the dependency to your code, see example section
+
+## Screenshots
+The application is totally safe, nothing is saved on third party, no request is sent outside, everything is handled in JS browser side
+![Azure SAS token generator](https://github.com/ah584d/azure-sas-token/blob/master/assets/sas.jpg)
+
+For those who still hesitate, you can checkout the code and run it locally on your computer
+
+```sh
+npm run start
+```
+
+
 
 ## Posting messages in Azure service-bus queue - tutorial
 https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
