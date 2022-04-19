@@ -4,7 +4,7 @@
     "compile": "tsc -p . --pretty"
   },
   "dependencies": {
-    "azure-sas-token": "^0.0.45"
+    "azure-sas-token": "^0.0.46"
   },
   "devDependencies": {
     "typescript": "^4.6.3"

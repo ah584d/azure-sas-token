@@ -1,6 +1,6 @@
 {
   "name": "azure-sas-token",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "author": "Avraham Hamu",
   "description": "simple node lib to generate azure sas token",
   "license": "ISC",
@@ -14,8 +14,9 @@
     "compile": "tsc -p . --pretty",
     "compile:dev": "npm run compile -- -w",
     "copy": "copy ..\\README.md .",
+    "comment": "do not forget to remove angular chapters from README since they are no more relevant for npm package",
     "lint": "eslint --ext .js,.ts .",
-    "prepublish": "npm test && npm copy && babel src --out-dir lib ",
+    "prepublish": "npm test && babel src --out-dir lib",
     "patch": "npm version patch",
     "publish": "npm publish",
     "test": "jest"
