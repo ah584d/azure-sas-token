@@ -13,8 +13,9 @@
     "build": "del-cli lib && npm run compile && npm run lint && del-cli lib/*.tsbuildinfo",
     "compile": "tsc -p . --pretty",
     "compile:dev": "npm run compile -- -w",
+    "copy": "copy ..\\README.md .",
     "lint": "eslint --ext .js,.ts .",
-    "prepublish": "npm test && babel src --out-dir lib",
+    "prepublish": "npm test && npm copy && babel src --out-dir lib ",
     "patch": "npm version patch",
     "publish": "npm publish",
     "test": "jest"
