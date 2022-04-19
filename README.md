@@ -8,7 +8,7 @@ The current project is about how to programmatically generate a Shared Access Si
 
 ![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/min/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages) [![HitCount](http://hits.dwyl.com/ah584d/azure-sas-token.svg)](http://hits.dwyl.com/ah584d/azure-sas-token)
 ## Motivation
-After googling for a while in order to generate the necessary token, to post messages to Azure service bus, I noticed that there is no clear explanations, how to achieve it in JavaScript!!
+After googling for a while in order to generate the necessary token, to post messages to Azure service bus, I noticed that there is no clear explanations, how to achieve it in JavaScript!!<br/>
 I'm proud to offer you a simple JS way to generate Azure SAS token - using node - or angular.
 
 ## Features
@@ -43,7 +43,7 @@ console.log(`sasToken: ${sasToken}`);
  
 ## Angular bonus application [not delivered into the npm package itself]
 
-If you prefer a simplier way to get fastly a token, you could use my angular application azure-sas-token from here:
+If you prefer a simplier way to get fastly a token, you could use my angular application azure-sas-token from here:<br/>
 https://ah584d.github.io/azure-sas-token/
 
 This is the same application of the 'angular' folder, you can use the online version, or to checkout the repository and run it locally on your computer.
@@ -59,7 +59,7 @@ Authorization: SharedAccessSignature sr=https%3A%2F%2F<yournamespace>.servicebus
 ```
 
 ## Angular app screenshots
-The application is totally safe, nothing is saved on third party, no request is sent outside, everything is handled in JS browser side
+The application is totally safe, nothing is saved on third party, no request is sent outside, everything is handled in client side
 ![Azure SAS token generator](https://github.com/ah584d/azure-sas-token/blob/master/assets/sas.jpg)
 
 
@@ -78,7 +78,7 @@ Done!
 ## Build status
 ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
-## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ah584d/azure-sas-token/issues)
+## [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ah584d/azure-sas-token/issues)
 ## Credits
 The only related topic that I founded on Microsoft Azure help
 
