@@ -2,11 +2,11 @@
 
 ## Azure SAS token generator
 
-> A simple JavaScript Shared Access Signature (SAS) token generator for any Azure service
+> A simple Typescript Shared Access Signature (SAS) token generator for any Azure service
 
 This project programmatically generates a Shared Access Signature (SAS) token that authorizes requests to any Azure resource that supports SAS authentication, including Service Bus, Event Hubs, Storage, IoT Hub, and Azure Relay.
 
-![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages) [![HitCount](http://hits.dwyl.com/ah584d/azure-sas-token.svg)](http://hits.dwyl.com/ah584d/azure-sas-token)
+![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
 ## Motivation
 
