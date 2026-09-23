@@ -1,29 +1,29 @@
 import { createHmac } from 'crypto';
-import { encode } from 'utf8';
 
-createSharedAccessToken
-export function createSharedAccessToken(resourceUri: string, saPolicyName: string, saKey: string, saValidity = 60*60*24*7) {
+const DEFAULT_VALIDITY_SECONDS = 60 * 60 * 24 * 7;
+
+export function createSharedAccessToken(
+  resourceUri: string,
+  saPolicyName: string,
+  saKey: string,
+  saValidity = DEFAULT_VALIDITY_SECONDS,
+): string {
   if (!resourceUri || !saPolicyName || !saKey) {
-    throw 'Missing required parameter';
+    throw new TypeError('Missing required parameter');
+  }
+
+  if (!Number.isSafeInteger(saValidity) || saValidity <= 0) {
+    throw new RangeError('saValidity must be a positive number of seconds');
   }
 
   const urlEncoded = encodeURIComponent(resourceUri);
 
   // Set expiration in seconds
-  const now = new Date();
-  const ttl = Math.round(now.getTime() / 1000) + saValidity;
+  const ttl = Math.floor(Date.now() / 1000) + saValidity;
 
   const signature = urlEncoded + '\n' + ttl;
 
-  const signatureUTF8 = encode(signature);
-
-  // Use crypto
-  // 1. Creates an Hmac object that uses the given sha256 algorithm and key provided
-  // 2. binds data
-  // 3. encode in base64
-  const hash = createHmac('sha256', saKey)
-                    .update(signatureUTF8)
-                    .digest('base64');
+  const hash = createHmac('sha256', saKey).update(signature, 'utf8').digest('base64');
 
   return `SharedAccessSignature sr=${urlEncoded}&sig=${encodeURIComponent(hash)}&se=${ttl}&skn=${saPolicyName}`;
 }

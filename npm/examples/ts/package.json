@@ -1,12 +1,17 @@
 {
-  "description": "example how to use azure-sas-token",
+  "private": true,
+  "description": "TypeScript example for azure-sas-token",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "compile": "tsc -p . --pretty"
+    "compile": "tsc -p . --pretty",
+    "dev": "npm run compile && node dist/myAppExample.js"
   },
   "dependencies": {
     "azure-sas-token": "^0.0.46"
   },
   "devDependencies": {
-    "typescript": "^4.6.3"
+    "typescript": "^7.0.2"
   }
 }

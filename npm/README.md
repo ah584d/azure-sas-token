@@ -1,20 +1,21 @@
-<img src="assets/icon.svg" align="right" />
+<img src="https://raw.githubusercontent.com/ah584d/azure-sas-token/master/assets/sas-token-logo.svg" align="right" width="180" alt="Azure SAS Token" />
 
 ## Azure SAS token generator
-> A simple JavaScript Azure SAS token generator
 
+> A simple JavaScript Shared Access Signature (SAS) token generator for any Azure service
 
-The current project is about how to programmatically generate a Shared Access Signature (SAS) token to use with <a href="https://github.com/ah584d/azure-send-message-to-service-bus-with-postman">Postman in order to post messages to Azure Service Bus Topic/Queue.</a>
+This project programmatically generates a Shared Access Signature (SAS) token that authorizes requests to any Azure resource that supports SAS authentication, including Service Bus, Event Hubs, Storage, IoT Hub, and Azure Relay.
 
-![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/azure-sas-token) ![npm bundle size](https://img.shields.io/bundlephobia/min/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages) [![HitCount](http://hits.dwyl.com/ah584d/azure-sas-token.svg)](http://hits.dwyl.com/ah584d/azure-sas-token)
+![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages) [![HitCount](http://hits.dwyl.com/ah584d/azure-sas-token.svg)](http://hits.dwyl.com/ah584d/azure-sas-token)
+
 ## Motivation
-After googling for a while in order to generate the necessary token, to post messages to Azure service bus, I noticed that there is no clear explanations, how to achieve it in JavaScript!!<br/>
-I'm proud to offer you a simple JS way to generate Azure SAS token - using node - or angular.
+
+Generating a valid Azure SAS token in JavaScript is poorly documented across Azure services. This library offers a small, dependency-free way to do it from Node.js for any Azure resource that accepts SAS authentication.
 
 ## Features
 
-azure sas token generation in node<br/>
-Don't forget to let me a <a class="github-button" href="https://github.com/ah584d/azure-sas-token" data-size="large" aria-label="Star ah584d/azure-sas-token on GitHub">Star</a> &#11088; :-) 
+Azure SAS token generation in Node.js, usable with any Azure service that supports SAS (Service Bus, Event Hubs, Storage, IoT Hub, Relay).<br/>
+Don't forget to let me a <a class="github-button" href="https://github.com/ah584d/azure-sas-token" data-size="large" aria-label="Star ah584d/azure-sas-token on GitHub">Star</a> &#11088; :-)
 
 ## Installation
 
@@ -23,48 +24,72 @@ npm install azure-sas-token
 ```
 
 ## Code Example
+
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 ```javascript
 import { createSharedAccessToken } from 'azure-sas-token';
 
+// The three required parameters come from the Azure portal:
+//   1. resourceUri   -> full URL of the target resource (queue, topic, container, hub...)
+//   2. saPolicyName  -> the Shared Access Policy name (e.g. "RootManageSharedAccessKey")
+//   3. saKey         -> the Primary Key value copied from that policy (base64 string)
+
+const resourceUri = 'https://mynamespace.servicebus.windows.net/myqueue';
+const saPolicyName = 'RootManageSharedAccessKey';
+const saKey = 'REPLACE_WITH_YOUR_PRIMARY_KEY_FROM_AZURE_PORTAL';
+
 // default token validity is 7 days
-let sasToken = createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
-								'<signature key name>',
-								'<signature hash>');
+let sasToken = createSharedAccessToken(resourceUri, saPolicyName, saKey);
 console.log(`sasToken: ${sasToken}`);
 
-// Specify your own validity in secs, two hours in this example
-sasToken = createSharedAccessToken('https://<service namespace>.servicebus.windows.net/<topic name or queue>',
-								'<signature key name>',
-								'<signature hash>', 
-								60 * 60 * 2);
+// custom validity in seconds (two hours in this example)
+sasToken = createSharedAccessToken(resourceUri, saPolicyName, saKey, 60 * 60 * 2);
 console.log(`sasToken: ${sasToken}`);
 ```
- 
+
+The generated token is passed as the `Authorization` header:
+
+```sh
+Authorization: SharedAccessSignature sr=<url-encoded resource URI>&sig=<signature>&se=<expiry>&skn=<key name>
+```
+
 ## Posting messages in Azure service-bus queue - tutorial
+
+A full walk-through of posting messages to an Azure Service Bus queue or topic using the generated token is available here:
+
 https://github.com/ah584d/azure-send-message-to-service-bus-with-postman
 
 ```sh
 POST https://<yournamespace>.servicebus.windows.net/<yourentity>/messages
 Content-Type: application/json
-Authorization: SharedAccessSignature sr=https%3A%2F%2F<yournamespace>.servicebus.windows.net%2F<yourentity>&sig=<your token generated by this repository code>&se=1438205742&skn=KeyName
+Authorization: SharedAccessSignature sr=https%3A%2F%2F<yournamespace>.servicebus.windows.net%2F<yourentity>&sig=<token generated by this library>&se=1438205742&skn=KeyName
 ```
 
 ## Tests
-Done!
+
+The library ships with a Jest test suite covering input validation, default expiration behavior, custom validity windows, and the token output format. Run it locally with:
+
+```sh
+npm test
+```
 
 ## Build status
+
 ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
 ## [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ah584d/azure-sas-token/issues)
+
 ## Credits
-The only related topic that I founded on Microsoft Azure help
+
+Based on the SAS token generation pattern documented by Microsoft:
 
 https://docs.microsoft.com/en-us/rest/api/eventhub/generate-sas-token
 
 Icon from: http://www.kameleon.pics
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
 
-MIT © [Avraham Hamu]()
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+
+MIT © Avraham Hamu
