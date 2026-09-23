@@ -28,9 +28,9 @@
     "compile:dev": "tsc -p . --pretty -w",
     "prepublishOnly": "npm test && npm run build",
     "patch": "npm version patch",
-    "publish": "npm publish",
+    "release": "npm publish",
     "test": "vitest run",
-    "post-publish": "npm dist-tag add azure-sas-token@0.0.50 latest"
+    "postpublish": "npm dist-tag add azure-sas-token@$npm_package_version latest"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.14",
