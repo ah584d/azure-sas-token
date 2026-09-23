@@ -1,6 +1,6 @@
 {
   "name": "azure-sas-token",
-  "version": "0.0.47",
+  "version": "0.0.49",
   "author": "Avraham Hamu",
   "description": "Generate Shared Access Signature (SAS) tokens for any Azure service (Service Bus, Event Hubs, Storage, IoT Hub, Relay) in Node.js.",
   "license": "MIT",
