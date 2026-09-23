@@ -1,4 +1,4 @@
-// import '@types/jest';
+import { describe, expect, test } from 'vitest';
 import { createSharedAccessToken } from '../src/index';
 
 describe('Azure Sas Token', () => {
@@ -33,14 +33,23 @@ describe('Azure Sas Token', () => {
 
   test(`on getting valids params should calculate a valid token`, () => {
     const result = createSharedAccessToken(MOCK_VALID_PARAM_1, MOCK_VALID_PARAM_2, MOCK_VALID_PARAM_3);
-    expect(result).toContain('SharedAccessSignature sr=https%3A%2F%2Fmy-namespace.servicebus.windows.net%2FqueueName&sig=');
+    expect(result).toContain(
+      'SharedAccessSignature sr=https%3A%2F%2Fmy-namespace.servicebus.windows.net%2FqueueName&sig=',
+    );
     expect(result).toContain('%3D&se=');
     expect(result).toContain('&skn=default');
   });
 
   test(`on providing optional 'saValidity' param, should generate token with provided expiration time`, () => {
-    const result = createSharedAccessToken(MOCK_VALID_PARAM_1, MOCK_VALID_PARAM_2, MOCK_VALID_PARAM_3, MOCK_VALID_PARAM_4);
-    expect(result).toContain('SharedAccessSignature sr=https%3A%2F%2Fmy-namespace.servicebus.windows.net%2FqueueName&sig=');
+    const result = createSharedAccessToken(
+      MOCK_VALID_PARAM_1,
+      MOCK_VALID_PARAM_2,
+      MOCK_VALID_PARAM_3,
+      MOCK_VALID_PARAM_4,
+    );
+    expect(result).toContain(
+      'SharedAccessSignature sr=https%3A%2F%2Fmy-namespace.servicebus.windows.net%2FqueueName&sig=',
+    );
     expect(result).toContain('%3D&se=');
     expect(result).toContain('&skn=default');
   });

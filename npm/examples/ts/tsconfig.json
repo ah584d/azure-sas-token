@@ -1,11 +1,12 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "commonjs",
-      "outDir": "./dist",
-      "strict": true,
-      "sourceMap": true
-    },
-    "include": ["./"],
-    "exclude": ["node_modules"]
-  }
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "outDir": "./dist",
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": ["./"],
+  "exclude": ["node_modules"]
+}

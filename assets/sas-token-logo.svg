@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Azure SAS Token</title>
+  <desc id="description">A modern round Azure SAS Token mark with the original green cloud-and-lock icon.</desc>
+  <defs>
+    <path id="text-ring" d="M256 256m-194 0a194 194 0 1 1 388 0a194 194 0 1 1-388 0"/>
+  </defs>
+  <circle cx="256" cy="256" r="228" fill="#f5f8fa"/>
+  <circle cx="256" cy="256" r="224" fill="#127a86"/>
+  <circle cx="256" cy="256" r="178" fill="#f5f8fa"/>
+  <text fill="#ffffff" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="2">
+    <textPath href="#text-ring" startOffset="1%">AZURE SAS TOKEN • AZURE SAS TOKEN •</textPath>
+  </text>
+  <circle cx="256" cy="256" r="174" fill="#32BEA6"/>
+  <g transform="translate(85.5 85.5) scale(3.1)">
+    <circle cx="55" cy="54.848" r="55" fill="#32BEA6"/>
+    <path d="M87 51.848c0-5.885-3.635-10.913-8.778-12.983C74.146 28.898 67.562 24.848 59.5 24.848c-7.579 0-14.148 4.319-17.369 10.637-0.962-0.41-2.02-0.637-3.131-0.637-4.314 0-7.821 3.417-7.984 7.692C26.35 44.185 23 48.62 23 53.848c0 6.627 5.373 12 12 12h40c0 0 12-2.226 12-14Z" fill="#F0F1F1"/>
+    <path d="M59.5 24.848c-7.579 0-14.148 4.319-17.369 10.637-5.125-2.183-10.902 1.442-11.116 7.055C26.35 44.185 23 48.62 23 53.848c0 6.293 4.847 11.446 11.011 11.95l37.095-37.096C67.775 26.044 63.856 24.848 59.5 24.848Z" fill="#FFFFFF"/>
+    <path d="M38.5 83.181c0 2.025 1.642 3.667 3.667 3.667h25.667c2.025 0 3.667-1.642 3.667-3.667V64.848c0-2.025-1.642-3.667-3.667-3.667H42.167c-2.025 0-3.667 1.642-3.667 3.667V83.181Z" fill="#FACB1B"/>
+    <path d="M66.917 61.181h-5.5v-6.417c0-3.538-2.878-6.417-6.417-6.417s-6.417 2.878-6.417 6.417v6.417h-5.5v-6.417c0-6.571 5.346-11.917 11.917-11.917s11.917 5.346 11.917 11.917V61.181Z" fill="#818284"/>
+    <path d="M57.509 69.769c0-1.705-1.383-3.088-3.088-3.088s-3.088 1.383-3.088 3.088c0 1.187 0.678 2.206 1.661 2.723l-1.661 8.856h6.175l-1.661-8.856c0.983-0.517 1.661-1.536 1.661-2.723Z" fill="#692E19"/>
+  </g>
+</svg>

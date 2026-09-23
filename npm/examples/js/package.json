@@ -1,5 +1,12 @@
 {
-  "description": "example how to use azure-sas-token",
+  "private": true,
+  "description": "JavaScript example for azure-sas-token",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node myExample.js"
+  },
   "dependencies": {
     "azure-sas-token": "^0.0.46"
   }
