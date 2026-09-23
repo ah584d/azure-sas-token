@@ -1,4 +1,4 @@
-<img src="../assets/sas-token-logo.svg" align="right" width="180" alt="Azure SAS Token" />
+<img src="https://raw.githubusercontent.com/ah584d/azure-sas-token/master/assets/sas-token-logo.svg" align="right" width="180" alt="Azure SAS Token" />
 
 ## Azure SAS token generator
 
