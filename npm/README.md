@@ -68,7 +68,15 @@ Authorization: SharedAccessSignature sr=https%3A%2F%2F<yournamespace>.servicebus
 
 ## Tests
 
-The library ships with a Jest test suite covering input validation, default expiration behavior, custom validity windows, and the token output format. Run it locally with:
+Reliability is a first-class concern for this library. Every release is gated by a comprehensive [Vitest](https://vitest.dev/) suite that exercises the full public API, including:
+
+- Input validation and defensive error handling for missing or malformed arguments
+- Default token lifetime (7 days) and custom validity windows expressed in seconds
+- Deterministic HMAC-SHA256 signature generation against known-good fixtures
+- Exact output format compliance with the Azure `SharedAccessSignature` specification (`sr`, `sig`, `se`, `skn`)
+- URL encoding of the resource URI to guarantee interoperability with the Azure REST APIs
+
+Tests run automatically on every publish through the `prepublishOnly` hook, so a broken build can never reach npm. You can run the same suite locally at any time:
 
 ```sh
 npm test
