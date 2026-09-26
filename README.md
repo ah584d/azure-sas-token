@@ -43,23 +43,28 @@ npm install azure-sas-token
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 ```javascript
-import { createSharedAccessToken } from 'azure-sas-token';
+import { createSharedAccessToken } from "azure-sas-token";
 
 // The three required parameters come from the Azure portal:
 //   1. resourceUri   -> full URL of the target resource (queue, topic, container, hub...)
 //   2. saPolicyName  -> the Shared Access Policy name (e.g. "RootManageSharedAccessKey")
 //   3. saKey         -> the Primary Key value copied from that policy (base64 string)
 
-const resourceUri = 'https://mynamespace.servicebus.windows.net/myqueue';
-const saPolicyName = 'RootManageSharedAccessKey';
-const saKey = 'REPLACE_WITH_YOUR_PRIMARY_KEY_FROM_AZURE_PORTAL';
+const resourceUri = "https://mynamespace.servicebus.windows.net/myqueue";
+const saPolicyName = "RootManageSharedAccessKey";
+const saKey = "REPLACE_WITH_YOUR_PRIMARY_KEY_FROM_AZURE_PORTAL";
 
 // default token validity is 7 days
 let sasToken = createSharedAccessToken(resourceUri, saPolicyName, saKey);
 console.log(`sasToken: ${sasToken}`);
 
 // custom validity in seconds (two hours in this example)
-sasToken = createSharedAccessToken(resourceUri, saPolicyName, saKey, 60 * 60 * 2);
+sasToken = createSharedAccessToken(
+  resourceUri,
+  saPolicyName,
+  saKey,
+  60 * 60 * 2,
+);
 console.log(`sasToken: ${sasToken}`);
 ```
 
@@ -116,4 +121,3 @@ Icon from: http://www.kameleon.pics
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 MIT © Avraham Hamu
-
