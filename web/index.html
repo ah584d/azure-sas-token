@@ -10,6 +10,15 @@
     />
     <meta name="theme-color" content="#0a1929" />
     <title>Azure SAS Token Generator</title>
+    <script>
+      // Apply the saved theme before CSS paints to avoid a color flash.
+      (function () {
+        var m = document.cookie.match(
+          /(?:^|;\s*)sas-theme=(azure|mint|sunset|violet)/,
+        );
+        if (m) document.documentElement.dataset.theme = m[1];
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

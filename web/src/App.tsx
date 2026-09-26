@@ -1,12 +1,26 @@
 import { createSignal } from "solid-js";
 import { TokenForm } from "./components/form";
 import { TokenOutput } from "./components/output";
+import { ThemePicker } from "./components/theme";
 import { createSharedAccessToken } from "./lib/sasToken";
+import {
+  applyTheme,
+  readThemeCookie,
+  writeThemeCookie,
+  type ThemeName,
+} from "./lib/theme";
 import type { FormValues } from "./lib/types";
 
 export function App() {
   const [token, setToken] = createSignal<string | null>(null);
   const [error, setError] = createSignal<string | null>(null);
+  const [theme, setThemeState] = createSignal<ThemeName>(readThemeCookie());
+
+  const setTheme = (next: ThemeName) => {
+    setThemeState(next);
+    applyTheme(next);
+    writeThemeCookie(next);
+  };
 
   const handleGenerate = async (values: FormValues) => {
     try {
@@ -56,6 +70,7 @@ export function App() {
           Event Hubs, Storage, IoT Hub, Relay. Your key never leaves your
           browser.
         </p>
+        <ThemePicker value={theme()} onChange={setTheme} />
       </header>
 
       <main>

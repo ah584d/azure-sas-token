@@ -10,8 +10,17 @@
     />
     <meta name="theme-color" content="#0a1929" />
     <title>Azure SAS Token Generator</title>
-    <script type="module" crossorigin src="./assets/index-DPdG0Z-5.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CrQQh3o4.css">
+    <script>
+      // Apply the saved theme before CSS paints to avoid a color flash.
+      (function () {
+        var m = document.cookie.match(
+          /(?:^|;\s*)sas-theme=(azure|mint|sunset|violet)/,
+        );
+        if (m) document.documentElement.dataset.theme = m[1];
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-BKrHN7Lq.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CyP41zgb.css">
   </head>
   <body>
     <div id="root"></div>
