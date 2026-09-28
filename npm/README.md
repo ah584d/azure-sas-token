@@ -6,7 +6,7 @@
 
 This project programmatically generates a Shared Access Signature (SAS) token that authorizes requests to any Azure resource that supports SAS authentication, including Service Bus, Event Hubs, Storage, IoT Hub, and Azure Relay.
 
-![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
+[![NPM](https://img.shields.io/npm/l/azure-sas-token)](https://www.npmjs.com/package/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) [![npm](https://img.shields.io/npm/v/azure-sas-token)](https://www.npmjs.com/package/azure-sas-token) [![npm](https://img.shields.io/npm/dt/azure-sas-token)](https://www.npmjs.com/package/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
 ## Motivation
 
@@ -18,6 +18,8 @@ Azure SAS token generation in Node.js, usable with any Azure service that suppor
 Don't forget to let me a <a class="github-button" href="https://github.com/ah584d/azure-sas-token" data-size="large" aria-label="Star ah584d/azure-sas-token on GitHub">Star</a> &#11088; :-)
 
 ## Installation
+
+Available on npm: **https://www.npmjs.com/package/azure-sas-token**
 
 ```sh
 npm install azure-sas-token

@@ -6,7 +6,7 @@
 
 This project programmatically generates a Shared Access Signature (SAS) token that authorizes requests to any Azure resource that supports SAS authentication, including Service Bus, Event Hubs, Storage, IoT Hub, and Azure Relay.
 
-![NPM](https://img.shields.io/npm/l/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) ![npm](https://img.shields.io/npm/v/azure-sas-token) ![npm](https://img.shields.io/npm/dt/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
+[![NPM](https://img.shields.io/npm/l/azure-sas-token)](https://www.npmjs.com/package/azure-sas-token) ![GitHub issues](https://img.shields.io/github/issues-raw/ah584d/azure-sas-token) [![npm](https://img.shields.io/npm/v/azure-sas-token)](https://www.npmjs.com/package/azure-sas-token) [![npm](https://img.shields.io/npm/dt/azure-sas-token)](https://www.npmjs.com/package/azure-sas-token) ![GitHub deployments](https://img.shields.io/github/deployments/ah584d/azure-sas-token/github-pages)
 
 ## Motivation
 
@@ -33,6 +33,8 @@ It's fully client-side and 100% safe to use:
 You can also self-host it — see [`web/README.md`](./web/README.md).
 
 ## Installation
+
+Available on npm: **https://www.npmjs.com/package/azure-sas-token**
 
 ```sh
 npm install azure-sas-token
