@@ -28,7 +28,7 @@ export function KeyInput(props: Props) {
         aria-pressed={visible()}
         onClick={() => setVisible(!visible())}
       >
-        {visible() ? "🙈" : "👁"}
+        {visible() ? "🙈" : "🫣"}
       </button>
     </div>
   );

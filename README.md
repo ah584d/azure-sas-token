@@ -15,7 +15,7 @@ Generating a valid Azure SAS token in JavaScript is poorly documented across Azu
 ## Features
 
 Azure SAS token generation in Node.js, usable with any Azure service that supports SAS (Service Bus, Event Hubs, Storage, IoT Hub, Relay).<br/>
-Don't forget to let me a <a class="github-button" href="https://github.com/ah584d/azure-sas-token" data-size="large" aria-label="Star ah584d/azure-sas-token on GitHub">Star</a> &#11086; :-)
+Don't forget to let me a <a class="github-button" href="https://github.com/ah584d/azure-sas-token" data-size="large" aria-label="Star ah584d/azure-sas-token on GitHub">Star</a> &#11088;
 
 ## Web app — try it in your browser
 

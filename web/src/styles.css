@@ -319,7 +319,10 @@ body {
   border: none;
   color: var(--text-dim);
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  min-width: 3.25rem;
   padding: 0.35rem 0.55rem;
   border-radius: 8px;
   transition: background 0.15s ease;
