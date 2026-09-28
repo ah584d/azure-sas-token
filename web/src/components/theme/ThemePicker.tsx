@@ -1,4 +1,3 @@
-import { For } from "solid-js";
 import { THEMES, type ThemeName } from "../../lib/theme";
 
 type Props = {
@@ -7,27 +6,30 @@ type Props = {
 };
 
 export function ThemePicker(props: Props) {
+  const themeIndex = () => THEMES.findIndex((theme) => theme.name === props.value);
+
   return (
-    <div class="theme-picker" role="radiogroup" aria-label="Color theme">
-      <For each={THEMES}>
-        {(theme) => (
-          <button
-            type="button"
-            role="radio"
-            aria-checked={props.value === theme.name}
-            aria-label={`${theme.label} theme — ${theme.description}`}
-            title={`${theme.label} — ${theme.description}`}
-            class="theme-swatch"
-            classList={{ active: props.value === theme.name }}
-            style={{ "--swatch": theme.swatch }}
-            onClick={() => props.onChange(theme.name)}
-          >
-            <span class="theme-swatch-check" aria-hidden="true">
-              ✓
-            </span>
-          </button>
-        )}
-      </For>
+    <div class="theme-picker">
+      <label class="sr-only" for="theme-slider">
+        Color theme
+      </label>
+      <input
+        id="theme-slider"
+        class="theme-slider"
+        type="range"
+        min="0"
+        max={THEMES.length - 1}
+        step="1"
+        value={themeIndex()}
+        aria-valuetext={`${THEMES[themeIndex()].label}: ${THEMES[themeIndex()].description}`}
+        onInput={(event) => {
+          const theme = THEMES[event.currentTarget.valueAsNumber];
+          if (theme) props.onChange(theme.name);
+        }}
+      />
+      <span class="theme-slider-label" aria-live="polite">
+        {THEMES[themeIndex()].label}
+      </span>
     </div>
   );
 }
