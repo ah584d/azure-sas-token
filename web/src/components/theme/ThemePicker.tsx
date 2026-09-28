@@ -6,12 +6,13 @@ type Props = {
 };
 
 export function ThemePicker(props: Props) {
-  const themeIndex = () => THEMES.findIndex((theme) => theme.name === props.value);
+  const themeIndex = () =>
+    THEMES.findIndex((theme) => theme.name === props.value);
 
   return (
     <div class="theme-picker">
       <label class="sr-only" for="theme-slider">
-        Color theme
+        Theme
       </label>
       <input
         id="theme-slider"

@@ -423,7 +423,9 @@ body {
   font-weight: 600;
   background: linear-gradient(135deg, var(--accent-2), var(--accent));
   border-color: transparent;
-  box-shadow: 0 0 0 4px var(--accent-glow);
+  box-shadow:
+    0 0 0 3px var(--accent-glow),
+    0 0 10px 2px var(--accent-glow);
 }
 
 .generate {
@@ -633,12 +635,8 @@ body {
   background: linear-gradient(
     90deg,
     #38bdf8 0%,
-    #38bdf8 33.33%,
     #10b981 33.33%,
-    #10b981 66.66%,
     #f59e0b 66.66%,
-    #f59e0b 83.33%,
-    #a78bfa 83.33%,
     #a78bfa 100%
   );
 }
@@ -652,7 +650,9 @@ body {
   appearance: none;
   -webkit-appearance: none;
   background: var(--text);
-  box-shadow: 0 0 0 1px var(--card-border), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 0 1px var(--card-border),
+    0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .theme-slider:focus-visible {
@@ -667,12 +667,8 @@ body {
   background: linear-gradient(
     90deg,
     #38bdf8 0%,
-    #38bdf8 33.33%,
     #10b981 33.33%,
-    #10b981 66.66%,
     #f59e0b 66.66%,
-    #f59e0b 83.33%,
-    #a78bfa 83.33%,
     #a78bfa 100%
   );
 }
@@ -683,7 +679,9 @@ body {
   border: 3px solid var(--card-bg);
   border-radius: 50%;
   background: var(--text);
-  box-shadow: 0 0 0 1px var(--card-border), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 0 0 1px var(--card-border),
+    0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .theme-slider-label {
